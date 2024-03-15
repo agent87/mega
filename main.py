@@ -1,5 +1,12 @@
 import streamlit as st
 
+OPTIONS = ['Translate','Dictionary','Speech Recognition']
+
+#add columns
+with st.sidebar:
+    st.sidebar.selectbox('Choose Service', options=OPTIONS)
+
+
 
 # Title of the application
 st.title('AI Powered language assistant and poor learning system')
