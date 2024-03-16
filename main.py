@@ -15,7 +15,14 @@ with st.sidebar:
 
 
 if service == 'Translate':
-    pass
+    st.text_input(label='Type in the Sentence to Translate')
+
+    translate = st.button('Translate', help='Input the word here!')
+
+    if translate:
+        st.write('Translated Text:')
+        st.write("Iperereza ryahindutse ku murongo mushya w'iperereza.")
+
 
 if service == 'Dictionary':
     st.text_input(label='Type in the word')
@@ -33,7 +40,7 @@ if service == 'Dictionary':
 
 
     #Show the examples of the word in use
-        st.text('''
+    st.text('''
                 Examples of the word:
                 1.He made some inquiries and discovered she had gone to the Continent.
                 2.After a brief inquiry about the Christmas holiday, he returned to the subject of music.
@@ -45,7 +52,7 @@ if service == 'Dictionary':
 if service == 'Speech Recognition':
     st.file_uploader('Upload Audio File')
     #Submit Button
-    explain = st.button('Explain the word', help='Input the word here!')
+    explain = st.button('Transcribe', help='Input the word here!')
 
     if explain:
     #Show the meaning of the word
